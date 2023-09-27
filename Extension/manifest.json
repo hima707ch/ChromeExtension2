@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Save LinkedIn data",
+    "version": "1.0.0",
+    "description": "A simple Chrome extension save data for linked In profiles.",
+    "permissions": [
+      "activeTab"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "48": "images/download.png"  
+      }
+    },
+    "content_scripts": [
+      {
+        "run_at": "document_end",
+        "matches": ["https://www.linkedin.com/in/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
